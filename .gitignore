@@ -129,8 +129,7 @@ dmypy.json
 .pyre/
 
 # input data and models
-input/README.md
-input/data
+input
 outputs/models/
 outputs/Outputs.md
 For_Blog/
