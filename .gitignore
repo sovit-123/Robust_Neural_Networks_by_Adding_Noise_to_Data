@@ -130,6 +130,7 @@ dmypy.json
 
 # input data and models
 input/README.md
+input/data
 outputs/models/
 outputs/Outputs.md
 For_Blog/

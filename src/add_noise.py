@@ -1,3 +1,8 @@
+'''
+Execute by:
+python add_noise.py --dataset=cifar10 --gauss_noise=0.05 --salt_pep=0.5 --speckle_noise=0.05
+'''
+
 from torchvision import datasets
 from torch.utils.data import DataLoader
 from torchvision.utils import save_image
@@ -37,26 +42,26 @@ if args['dataset'] == 'mnist' or args['dataset'] == 'fashionmnist':
     ])
     if args['dataset'] == 'mnist':
         trainset = datasets.MNIST(
-            root='D:\Data_Science\Datasets\PyTorch_Datasets',
+            root='../input/data',
             train=True,
             download=True, 
             transform=transform
         )
         testset = datasets.MNIST(
-            root='D:\Data_Science\Datasets\PyTorch_Datasets',
+            root='../input/data',
             train=False,
             download=True,
             transform=transform
         )
     elif args['dataset'] == 'fashionmnist':
         trainset = datasets.FashionMNIST(
-            root='D:\Data_Science\Datasets\PyTorch_Datasets',
+            root='../input/data',
             train=True,
             download=True, 
             transform=transform
         )
         testset = datasets.FashionMNIST(
-            root='D:\Data_Science\Datasets\PyTorch_Datasets',
+            root='../input/data',
             train=False,
             download=True,
             transform=transform
@@ -67,13 +72,13 @@ if args['dataset'] == 'cifar10':
         transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)), 
     ])
     trainset = datasets.CIFAR10(
-        root='D:\Data_Science\Datasets\PyTorch_Datasets',
+        root='../input/data',
         train=True,
         download=True, 
         transform=transform
     )
     testset = datasets.CIFAR10(
-        root='D:\Data_Science\Datasets\PyTorch_Datasets',
+        root='../input/data',
         train=False,
         download=True,
         transform=transform
@@ -102,7 +107,7 @@ def gaussian_noise():
     for data in trainloader:
         img, _ = data[0], data[1]
         # make var=0.0 to add 0 noise
-        # gauss_img = torch.tensor(random_noise(img, mode='gaussian', mean=0, var=args['gauss_noise'], clip=True))
+        gauss_img = torch.tensor(random_noise(img, mode='gaussian', mean=0, var=args['gauss_noise'], clip=True))
         save_noisy_image(gauss_img, f"outputs/plots/{args['dataset']}_{args['gauss_noise']}_gaussian.png")
         break
 
