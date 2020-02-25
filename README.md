@@ -23,4 +23,3 @@
 ## 3) Approach
 
 * Use `prepare_datasets.py` file to prepare the noisy pixel data CSV files.
-* # Robust_Neural_Networks_by_Adding_Noise_to_Data
