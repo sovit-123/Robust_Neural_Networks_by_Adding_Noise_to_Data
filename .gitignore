@@ -133,10 +133,10 @@ input/
 outputs/models/
 outputs/Outputs.md
 For_Blog/
-src/.ipynb_checkpoints
-src/.vscode
-src/helper_files
-.vscode
+src/.ipynb_checkpoints/
+src/.vscode/
+src/helper_files/
+.vscode/
 
 # data files
 *.csv
