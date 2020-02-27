@@ -45,7 +45,7 @@
 
       * Execute the file:
 
-        ```python
+        ```
         # to add noise to CIFAR10 dataset
         python src/add_noise.py --dataset=cifar10 --gauss_noise=0.5 --salt_pep=0.5 --speckle_noise=0.5
         
@@ -70,7 +70,7 @@
 
       * Execute the file:
 
-        ```python
+        ```
         # training without random noise, validating without random noise 
         python src/train_rnd_noise.py --epochs=20 --train_noise=no --test_noise=no
         
@@ -84,16 +84,20 @@
         python src/train_rnd_noise.py --epochs=1 --train_noise=yes --test_noise=yes
         ```
 
+        
+
     * `train_gauss_noise.py`:
 
       * You can execute this python file to train neural network model by applying ***gaussian noise to image data***.
 
       * Execute the file:
 
-        ```python
-        # train with variance 0.5, validate with variance 0.5
+        ```
+        # train with variance 0.5, validate with variance 0.5	
         python src/train_gauss_noise.py --epochs=10 --train_noise=0.5 --test_noise=0.5
         ```
+
+        
 
       * `--test_noise`: variance for validation images for the gaussian noise.
 
