@@ -1,6 +1,6 @@
 * # README
 
-  
+  ![Accuracy plot](https://debuggercafe.com/wp-content/uploads/2020/02/yes_yes_acc.png)
 
   ## 1) Research Paper Implementation
 
